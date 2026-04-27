@@ -29,7 +29,7 @@ A **TypeScript** type definitions package for **utility** types.
 - **Reusable utility types** like `Mutable`, `Expand`, `OneOrMany`, and more.
 - No runtime code or dependencies.
 - Simple import for type composition and inference.
-- Complements [TypeScript’s built-in utility types](https://www.typescriptlang.org/docs/handbook/utility-types.html).
+- Provides additional utility types beyond [TypeScript’s built-in utility types](https://www.typescriptlang.org/docs/handbook/utility-types.html).
 
 ## Table of contents
 
