@@ -75,7 +75,7 @@ import type {
 ### `Expand`
 
 ```typescript
-import { Expand } from '@typedly/schema';
+import { Expand } from '@typedly/utility';
 
 type Data = {
   readonly id: number;
@@ -90,7 +90,7 @@ type Expanded = Expand<A>; // { foo: number; bar: string }
 ### `ExpandDeep`
 
 ```typescript
-import { ExpandDeep } from '@typedly/schema';
+import { ExpandDeep } from '@typedly/utility';
 
 type Example = {
   user: {
@@ -114,7 +114,7 @@ type Expanded = ExpandDeep<Example>;
 ### `IsOptional`
 
 ```typescript
-import { IsOptional } from '@typedly/schema';
+import { IsOptional } from '@typedly/utility';
 
 type Example = {
   id: string;
@@ -128,7 +128,7 @@ type EmailOptional = IsOptional<"email">; // true
 ### `Mutable`
 
 ```typescript
-import { Mutable } from '@typedly/schema';
+import { Mutable } from '@typedly/utility';
 
 // Remove readonly properties
 type MutableData = Mutable<Data>; // { id: number; tags: readonly string[] }
@@ -137,7 +137,7 @@ type MutableData = Mutable<Data>; // { id: number; tags: readonly string[] }
 ### `OneOrMany`
 
 ```typescript
-import { OneOrMany } from '@typedly/schema';
+import { OneOrMany } from '@typedly/utility';
 
 // Accept a single item or an array
 type TagInput = OneOrMany<string>; // string | string[] | readonly string[]
@@ -146,7 +146,7 @@ type TagInput = OneOrMany<string>; // string | string[] | readonly string[]
 ### `RemoveOptional`
 
 ```typescript
-import { RemoveOptional } from '@typedly/schema';
+import { RemoveOptional } from '@typedly/utility';
 
 type Original = {
   a?: number;
@@ -249,21 +249,21 @@ MIT © typedly ([license][package-license])
 
 <!-- This package: typedly  -->
   <!-- GitHub: badges -->
-  [package-badge-issues]: https://img.shields.io/github/issues/typedly/schema
-  [package-badge-forks]: https://img.shields.io/github/forks/typedly/schema
-  [package-badge-stars]: https://img.shields.io/github/stars/typedly/schema
-  [package-badge-license]: https://img.shields.io/github/license/typedly/schema
+  [package-badge-issues]: https://img.shields.io/github/issues/typedly/utility
+  [package-badge-forks]: https://img.shields.io/github/forks/typedly/utility
+  [package-badge-stars]: https://img.shields.io/github/stars/typedly/utility
+  [package-badge-license]: https://img.shields.io/github/license/typedly/utility
   <!-- GitHub: badges links -->
-  [package-issues]: https://github.com/typedly/schema/issues
-  [package-forks]: https://github.com/typedly/schema/network
-  [package-license]: https://github.com/typedly/schema/blob/master/LICENSE
-  [package-stars]: https://github.com/typedly/schema/stargazers
+  [package-issues]: https://github.com/typedly/utility/issues
+  [package-forks]: https://github.com/typedly/utility/network
+  [package-license]: https://github.com/typedly/utility/blob/master/LICENSE
+  [package-stars]: https://github.com/typedly/utility/stargazers
 <!-- This package -->
 
 <!-- Package: typedly -->
   <!-- npm -->
-  [package-npm-badge-svg]: https://badge.fury.io/js/@typedly%2Fschema.svg
-  [package-npm-badge]: https://badge.fury.io/js/@typedly%2Fschema
+  [package-npm-badge-svg]: https://badge.fury.io/js/@typedly%2Futility.svg
+  [package-npm-badge]: https://badge.fury.io/js/@typedly%2Futility
 
 <!-- GIT -->
 [git-semver]: http://semver.org/
