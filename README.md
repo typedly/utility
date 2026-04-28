@@ -91,12 +91,38 @@ type Expanded = Expand<A>; // { foo: number; bar: string }
 
 ```typescript
 import { ExpandDeep } from '@typedly/schema';
+
+type Example = {
+  user: {
+    readonly name: string;
+    address: {
+      readonly city: string;
+    }
+  }
+};
+
+type Expanded = ExpandDeep<Example>;
+// Result:
+// {
+//   user: {
+//     name: string;
+//     address: { city: string; }
+//   }
+// }
 ```
 
 ### `IsOptional`
 
 ```typescript
 import { IsOptional } from '@typedly/schema';
+
+type Example = {
+  id: string;
+  email?: string;
+};
+
+type IdOptional = IsOptional<"id">;      // false
+type EmailOptional = IsOptional<"email">; // true
 ```
 
 ### `Mutable`
@@ -121,6 +147,16 @@ type TagInput = OneOrMany<string>; // string | string[] | readonly string[]
 
 ```typescript
 import { RemoveOptional } from '@typedly/schema';
+
+type Original = {
+  a?: number;
+  b: string;
+  c?: boolean;
+};
+
+type NoOptionals = RemoveOptional<keyof Original>;
+// Result:
+// type NoOptionals = "a" | "b" | "c"
 ```
 
 ## Contributing
