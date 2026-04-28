@@ -37,8 +37,11 @@ A **TypeScript** type definitions package for **utility** types.
 - [Api](#api)
   - Type
     - [`Expand`](#expand)
+    - [`ExpandDeep`](#expanddeep)
+    - [`IsOptional`](#isoptional)
     - [`Mutable`](#mutable)
     - [`OneOrMany`](#oneormany)
+    - [`RemoveOptional`](#removeoptional)
 - [Contributing](#contributing)
 - [Support](#support)
 - [Code of Conduct](#code-of-conduct)
@@ -59,8 +62,11 @@ npm install @typedly/utility --save-peer
 ```typescript
 import type {
   Expand,
+  ExpandDeep,
+  IsOptional,
   Mutable,
   OneOrMany,
+  RemoveOptional,
 } from '@typedly/utility';
 ```
 
@@ -81,6 +87,18 @@ type A = { foo: number } & { bar: string };
 type Expanded = Expand<A>; // { foo: number; bar: string }
 ```
 
+### `ExpandDeep`
+
+```typescript
+import { ExpandDeep } from '@typedly/schema';
+```
+
+### `IsOptional`
+
+```typescript
+import { IsOptional } from '@typedly/schema';
+```
+
 ### `Mutable`
 
 ```typescript
@@ -97,6 +115,12 @@ import { OneOrMany } from '@typedly/schema';
 
 // Accept a single item or an array
 type TagInput = OneOrMany<string>; // string | string[] | readonly string[]
+```
+
+### `RemoveOptional`
+
+```typescript
+import { RemoveOptional } from '@typedly/schema';
 ```
 
 ## Contributing
