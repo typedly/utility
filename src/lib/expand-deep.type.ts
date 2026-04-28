@@ -16,3 +16,22 @@ export type ExpandDeep<T> =
   : T extends object ? { -readonly [K in keyof T]: ExpandDeep<T[K]> }
   // Handle primitive types. e.g. string => string
   : T;
+
+// // Example usage:
+// type Example = {
+//   user: {
+//     readonly name: string;
+//     address: {
+//       readonly city: string;
+//     }
+//   }
+// };
+
+// type Expanded = ExpandDeep<Example>;
+// // Result:
+// // {
+// //   user: {
+// //     name: string;
+// //     address: { city: string; }
+// //   }
+// // }

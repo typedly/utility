@@ -5,3 +5,13 @@
  * @template {string} S 
  */
 export type RemoveOptional<S extends string> = S extends `${infer R}?` ? R : S;
+
+// type Original = {
+//   a?: number;
+//   b: string;
+//   c?: boolean;
+// };
+
+// type NoOptionals = RemoveOptional<keyof Original>;
+// // Result:
+// // type NoOptionals = "a" | "b" | "c"
